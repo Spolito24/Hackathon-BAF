@@ -1,3 +1,39 @@
+:root {
+    /* Base Color */
+    --white-color: #ffffff;
+    --blue-color: #1E90FF;
+
+    /* Font */
+--content-font: 'Rufina', serif;
+--title-font: 'Ysabeau', sans-serif;
+}
+
+
+
 body {
     color: #f76c6c;
+   font-family: 'Rufina', serif;
 }
+
+
+/* Nav */
+
+nav {
+font-family: var(--title-font);
+font-weight: italic;
+font-size:1.2rem;
+}
+
+.nav-color {
+    background-color: var(--blue-color);
+}
+
+.nav-link {
+    color:var(--white-color);
+}
+
+/* Footer */
+.logo-footer-size {
+    width: 24px;
+    height: 24px;
+  }
