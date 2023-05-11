@@ -1,8 +1,8 @@
 {% extends 'layout.html.twig' %}
 {% block content %}
-	{# <div id="spinner">
-						<img src="/assets/images/spinner.gif">
-					</div> #}
+	<div id="spinner">
+						<img class="spin-size" src="/assets/images/spinner.gif">
+					</div>
 	<h2 class="destination-img " style="background-image: url({{travel.image}})"><p class="destination">{{ travel.city }}</p></h2>
 	<div class="container p-5">
 		<div class="card row p-4 mx-auto box shadow-lg">
@@ -14,7 +14,7 @@
 						<div><p class="felicitation">Félicitation vous partez au {{ travel.country }}</p></div>
 <p>Retrouvez toutes les informations dans l'onglet Voyages, un de nos agents va prendre très rapidement contact avec vous pour vous accompagnez dans cette nouvelle aventure. </p><br>
 							<p>
-							Pour information en moment la météo est de :
+							Pour information en ce moment la météo est de :
 							</p>
 							{{ temp }} degrés et {{ weather }}
 							<img src="{{ icon }}" alt="">
