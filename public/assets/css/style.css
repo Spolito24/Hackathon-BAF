@@ -191,3 +191,13 @@ nav {
         width: calc(70%);
     }
 }
+
+.text{
+  font-weight: 400;
+  font-size: 38px;
+  color: #FAFAFA;
+  font-family: "Ysabeau", sans-serif;
+}
+.dud{
+  color: #757575;
+}
