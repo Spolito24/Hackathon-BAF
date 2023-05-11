@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Model\TravelManager;
+
 class TravelController extends AbstractController
 {
 
@@ -33,10 +35,6 @@ class TravelController extends AbstractController
             if ($data['person'] < 1 || $data['person'] > 8) {
                 $errors[] = 'Entre 1 et 8 personnes peuvent participer.';
             }
-            // Check if guest is filled
-            if (!isset($data['guest']) || empty($data['guest'])) {
-                $errors[] = 'Vous devez definir si il y a un compagnon mystère.';
-            }
 
             if (empty($errors)) {
                 header('Location: /voyage');
@@ -57,6 +55,11 @@ class TravelController extends AbstractController
             exit();
         }
 
-        return $this->twig->render('Travel/destination.html.twig');
+        $travelManager = new TravelManager();
+        $travel = $travelManager->selectTravel();
+
+        return $this->twig->render('Travel/destination.html.twig', [
+            'travel' => $travel,
+        ]);
     }
 }
