@@ -78,7 +78,7 @@ const next = () => {
     })
     counter++
   } else {
-    el.innerText = "Destin-E" // remplacer 'Message final ici.' avec votre message final
+    el.innerText = "Destin-E"; 
   }
 }
 

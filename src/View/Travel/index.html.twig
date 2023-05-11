@@ -8,7 +8,7 @@
 			</div>
 		{% endfor %}
 	{% endif %}
-						<h1 class="background-img2 text-center"> Prêt à partir {{ user.username }} ?			
+						<h1 class="background-img2 text-center partir"> <div class="text"></div>	
 				</h1>
 	{% set date = "now"|date("Y-m-d") %}
     <form method="post">
@@ -65,7 +65,13 @@
                 </div>
                 <!-- END OF customer payment informations -->
 			<hr class="my-4">
-			<button class="w-100 btn btn-primary btn-lg" type="submit" id="submit">Valider mon voyage</button>
+			<button class="w-20 btn btn-primary btn-lg" type="submit" id="submit">Valider mon voyage</button>
 		</form>
 	</div>
+{% endblock %}
+{% block javascript %}
+<script>
+window.user = "{{ user.username }}";
+</script>
+	<script src="assets/js/jsexplore.js"></script>
 {% endblock %}
