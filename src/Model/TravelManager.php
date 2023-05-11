@@ -8,9 +8,6 @@ class TravelManager extends AbstractManager
 {
     public const TABLE = 'destination';
 
-
-
-
     /**
      * Select destination in DB
      */
