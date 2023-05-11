@@ -1,20 +1,54 @@
 :root {
     /* Base Color */
     --white-color: #ffffff;
-    --blue-color: #1E90FF;
+    --blue-color: #1e90ff;
+    --light-blue-color: #72baff;
 
     /* Font */
-    --content-font: 'Rufina', serif;
-    --title-font: 'Ysabeau', sans-serif;
+    --content-font: "Rufina", serif;
+    --title-font: "Ysabeau", sans-serif;
 }
-
-
 
 body {
-    color: #000000;
-    font-family: 'Rufina', serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Rufina", serif;
 }
 
+.background-img {
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(/assets/images/home-bg-image.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding: 5em 3em;
+    color: var(--blue-color);
+}
+
+.box {
+    background-color: var(--light-blue-color);
+    border-radius: 20px;
+}
+
+h2 {
+    color: var(--white-color);
+}
+
+p {
+    color: var(--white-color);
+}
+
+.profile-picture {
+    background-color: var(--white-color);
+}
 
 /* Nav */
 
@@ -37,7 +71,6 @@ nav {
     color: var(--white-color);
     text-decoration: none;
 }
-
 
 .nav-link:hover:after {
     content: "";
@@ -66,4 +99,10 @@ nav {
 .logo-footer-size {
     width: 24px;
     height: 24px;
+}
+
+/* Button */
+
+.btn-primary {
+    background-color: var(--blue-color);
 }
