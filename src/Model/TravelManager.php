@@ -22,4 +22,6 @@ class TravelManager extends AbstractManager
 
         return $this->pdo->query($query)->fetch();
     }
+
+    
 }
