@@ -28,9 +28,8 @@ body {
 }
 
 .title-index {
-    font-family:'Libre Baskerville', serif ;
+    font-family: "Libre Baskerville", serif;
 }
-
 
 .payment {
     color: var(--blue-color);
@@ -192,12 +191,23 @@ nav {
     }
 }
 
-.text{
-  font-weight: 400;
-  font-size: 38px;
-  color: #FAFAFA;
-  font-family: "Ysabeau", sans-serif;
+.text {
+    font-weight: 400;
+    font-size: 38px;
+    color: #fafafa;
+    font-family: "Ysabeau", sans-serif;
 }
-.dud{
-  color: #757575;
+.dud {
+    color: #757575;
+}
+
+.destination-img {
+    margin: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 7em 3em;
 }
