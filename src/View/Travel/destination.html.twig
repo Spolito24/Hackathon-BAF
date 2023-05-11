@@ -1,35 +1,32 @@
 {% extends 'layout.html.twig' %}
-
 {% block content %}
-{# <div id="spinner">
-	<img src="/assets/images/spinner.gif">
-</div> #}
+	{# <div id="spinner">
+						<img src="/assets/images/spinner.gif">
+					</div> #}
+	<h2 class="destination-img" style="background-image: url({{travel.image}})">Votre destination</h2>
+	<div class="container p-5">
+		<div class="card row p-4 mx-auto box shadow-lg">
+			<div class="col-xl-10 mx-auto">
+				<div class="text-center px-5 py-2">
 
-<h2 class="destination-img" style="background-image: url({{travel.image}})">Votre destination</h2>
-<div class="container p-5">
-	<div class="card row p-4 mx-auto box shadow-lg">
-		<div class="col-xl-10 mx-auto">
-			<div class="text-center px-5 py-2" <div class="d-flex flex-column">
-				<div class="mb-4">
-					<p>
-						{{ travel.city }}
-					</p>
-
-					{{ travel.country }}
-
-
-					<br>
-					{{ temp }}
-					<br>
-					{{weather}}
+					<div class="d-flex flex-column">
+						<div class="mb-4">
+							<p>
+								{{ travel.city }}
+							</p>
+							{{ travel.country }}
+							<br>
+							{{ temp }}
+							<br>
+							{{ weather }}
+							<img src="{{ icon }}" alt="">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-
-</div>
 {% endblock %}
 {% block javascript %}
-<script src="/assets/js/spinner.js"></script>
+	<script src="/assets/js/spinner.js"></script>
 {% endblock %}
