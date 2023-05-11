@@ -236,3 +236,24 @@ nav {
 
 font-size: 42px;
 }
+
+.line {
+    animation-duration: 4s;
+    animation-name: sliding;
+    animation-iteration-count: reverse;
+    width: 25vw;
+    height: 2px;
+    background-color: var(--blue-color);
+  }
+  
+  @keyframes sliding {
+    from {
+  
+      width: 0%;
+    }
+  
+    to {
+  
+      width: 25vw;
+    }
+  }
