@@ -48,4 +48,15 @@ class TravelController extends AbstractController
             'errors' => $errors
         ]);
     }
+
+    public function travelResponse(): string
+    {
+        // allowed only for users
+        if (!$this->user) {
+            header('Location: /login');
+            exit();
+        }
+
+        return $this->twig->render('Travel/destination.html.twig');
+    }
 }

@@ -9,6 +9,7 @@
 return [
     '' => ['HomeController', 'index',],
     'explore' => ['TravelController', 'travelRequest',],
+    'voyage' => ['TravelController', 'travelResponse',],
 
 
 
