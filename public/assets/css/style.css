@@ -1,27 +1,61 @@
 :root {
     /* Base Color */
     --white-color: #ffffff;
-    --blue-color: #1E90FF;
+    --blue-color: #1e90ff;
+    --light-blue-color: #72baff;
 
     /* Font */
---content-font: 'Rufina', serif;
---title-font: 'Ysabeau', sans-serif;
+    --content-font: "Rufina", serif;
+    --title-font: "Ysabeau", sans-serif;
 }
-
-
 
 body {
-
-   font-family: 'Rufina', serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Rufina", serif;
 }
 
+.background-img {
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(/assets/images/home-bg-image.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding: 5em 3em;
+    color: var(--blue-color);
+}
+
+.box {
+    background-color: var(--light-blue-color);
+    border-radius: 20px;
+}
+
+h2 {
+    color: var(--white-color);
+}
+
+p {
+    color: var(--white-color);
+}
+
+.profile-picture {
+    background-color: var(--white-color);
+}
 
 /* Nav */
 
 nav {
-font-family: var(--title-font);
-font-weight: italic;
-font-size:1.2rem;
+    font-family: var(--title-font);
+    font-weight: italic;
+    font-size: 1.2rem;
 }
 
 .nav-color {
@@ -29,7 +63,7 @@ font-size:1.2rem;
 }
 
 .nav-link {
-    color:var(--white-color);
+    color: var(--white-color);
     position: relative;
 }
 
@@ -38,8 +72,7 @@ font-size:1.2rem;
     text-decoration: none;
 }
 
-  
-  .nav-link:hover:after {
+.nav-link:hover:after {
     content: "";
     position: absolute;
     left: 0;
@@ -50,26 +83,25 @@ font-size:1.2rem;
     color: var(--white-color);
     text-decoration: none;
     animation: line-appear 0.3s forwards;
-  }
-  
-  @keyframes line-appear {
+}
+
+@keyframes line-appear {
     from {
-      transform: scaleX(0);
+        transform: scaleX(0);
     }
     to {
-      transform: scaleX(1);
+        transform: scaleX(1);
     }
-  }
-  
+}
+
 /* Footer */
 .logo-footer-size {
     width: 24px;
     height: 24px;
-  }
+}
 
 /* Button */
 
 .btn-primary {
     background-color: var(--blue-color);
 }
-
