@@ -27,7 +27,7 @@ class UserController extends AbstractController
                 // Check if user exists and password is correct
                 if ($user && password_verify($data['password'], $user['password'])) {
                     $_SESSION['id'] = $user['id'];
-                    header('Location: /');
+                    header('Location: /explore');
                     exit();
                 }
                 $this->errors[] = 'Invalid username or password.';
