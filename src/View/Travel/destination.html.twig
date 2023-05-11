@@ -6,16 +6,27 @@
 </div> #}
 
 <h2 class="destination-img" style="background-image: url({{travel.image}})">Votre destination</h2>
-<div class="py-5 text-center">
-	<h2 class="mt-3">Votre Prochaine Destination</h2>
-	{{ travel.city }}
-	{{ travel.country }}
+<div class="container p-5">
+	<div class="card row p-4 mx-auto box shadow-lg">
+		<div class="col-xl-10 mx-auto">
+			<div class="text-center px-5 py-2" <div class="d-flex flex-column">
+				<div class="mb-4">
+					<p>
+						{{ travel.city }}
+					</p>
+
+					{{ travel.country }}
 
 
-	<br>
-	{{ temp }}
-	<br>
-	{{weather}}
+					<br>
+					{{ temp }}
+					<br>
+					{{weather}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 </div>
 {% endblock %}
