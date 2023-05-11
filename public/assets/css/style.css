@@ -97,4 +97,11 @@ nav {
 /* Footer */
 .logo-footer-size {
     width: 24px;
+    height: 24px;
+}
+
+/* Button */
+
+.btn-primary {
+    background-color: var(--blue-color);
 }
