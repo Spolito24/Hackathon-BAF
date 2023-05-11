@@ -33,7 +33,7 @@ h1 {
     color: var(--blue-color);
 }
 
-.introduction {
+.box {
     background-color: var(--light-blue-color);
     border-radius: 20px;
 }
@@ -44,6 +44,10 @@ h2 {
 
 p {
     color: var(--white-color);
+}
+
+.profile-picture {
+    background-color: var(--white-color);
 }
 
 /* Nav */
