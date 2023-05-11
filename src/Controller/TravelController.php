@@ -58,6 +58,7 @@ class TravelController extends AbstractController
         $travelManager = new TravelManager();
         $travel = $travelManager->selectTravel();
 
+
         return $this->twig->render('Travel/destination.html.twig', [
             'travel' => $travel,
         ]);
