@@ -1,14 +1,17 @@
 {% extends 'layout.html.twig' %}
-
 {% block content %}
-
 	<section>
-		<h1 class="background-img title-index ">Ne prenez pas votre destin en main on le fait pour vous</h1>
-
+		<h1 class="background-img title-index text-center ">
+			<div class="text"></div>
+		</h1>
 		<div class="container p-5">
 			<div class="card row p-4 mx-auto box shadow-lg">
 				<div class="col-xl-10 mx-auto">
-					<divBienvenue</div class="text-center px-5 py-2" <div class="d-flex flex-column"> <div class="mb-4"> <h1 class="title-welcome" > sur destin-e</h1> </div> <div class="lineTitle">>
+					<div class="text-center px-5 py-2">
+						<div class="mb-4">
+							<h1 class="title-welcome">Bienvenue sur Destin-E</h1>
+						</div>
+						<div class="lineTitle"></div>
 						<ul class="nav nav-tabs nav-justified mt-4 mb-3" id="myTab" role="tablist">
 							<li class="nav-item" role="presentation">
 								<button class="nav-link active" id="concept-tab" data-bs-toggle="tab" data-bs-target="#tab-pane-concept" type="button" role="tab" aria-controls="tab-pane-picture" aria-selected="true">Concept</button>
@@ -20,7 +23,6 @@
 								<button class="nav-link" id="suivi-tab" data-bs-toggle="tab" data-bs-target="#tab-pane-suivi" type="button" role="tab" aria-controls="tab-pane-follows" aria-selected="false">Suivi</button>
 							</li>
 						</ul>
-
 						<div class="tab-content">
 							<div class="tab-pane fade show active" id="tab-pane-concept" role="tabpanel" aria-labelledby="concept-tab" tabindex="0">
 								<div class="mb-4">
@@ -47,26 +49,20 @@
 								<p>Préparez-vous à sortir de votre zone de confort, à embrasser l'inconnu et à créer des souvenirs inoubliables. Rejoignez-nous dès maintenant sur Destin-E et préparez-vous à vivre une aventure dont vous vous souviendrez toute votre vie.
 								</p>
 							</div>
-
 						</div>
 					</div>
-
-
 				</p>
 			</div>
 		</div>
-
 		<div class="pt-4 d-flex justify-content-center">
 			<a href="/explore" class="btn btn-primary btn-lg p-3">Laissez nous votre destin</a>
 		</div>
-
 		<div class="container py-5">
 			<div class="row d-flex justify-content-center">
 				<div class="col-md-10 col-xl-8 text-center">
-					<h3 class="fw-bold mb-4">Ils ont voyagé avec nous</h3>
+					<h3 class="fw-bold mb-4">Ils ont voyagés avec nous</h3>
 				</div>
 			</div>
-
 			<div class="row text-center">
 				<div class="col-md-4 mb-4 mb-md-0">
 					<div class="card box shadow-lg">
@@ -94,7 +90,7 @@
 							</ul>
 							<p class="mb-2">
 								<i class="fa fa-quote-left pe-2"></i>C'est le meilleur site que j'ai vu de toute ma vie
-									                                je vous le recommande les voyages sont géniaux
+									                                    je vous le recommande les voyages sont géniaux
 							</p>
 						</div>
 					</div>
@@ -125,7 +121,7 @@
 							</ul>
 							<p class="mb-2">
 								<i class="fa fa-quote-left pe-2"></i>J'ai fais un très très bon voyage au Botswana je
-									                                conseil de faire un voyage en plus c'est très bien organisé
+									                                    conseil de faire un voyage en plus c'est très bien organisé
 							</p>
 						</div>
 					</div>
@@ -156,7 +152,7 @@
 							</ul>
 							<p class="mb-2">
 								<i class="fa fa-quote-left pe-2"></i>Super voyage je suis allé au groenland
-									                                j'étais rétiçant à l'idée au début mais j'ai pu découvrir de super lieux, à refaire
+									                                    j'étais rétiçant à l'idée au début mais j'ai pu découvrir de super lieux, à refaire
 							</p>
 						</div>
 					</div>
@@ -164,4 +160,5 @@
 			</div>
 		</div>
 	</div>
-</section>{% endblock %}
+</section>{% endblock %}{% block javascript %}
+<script src="assets/js/jsindex.js"></script>{% endblock %}
