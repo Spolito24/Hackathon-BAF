@@ -262,3 +262,8 @@ font-size: 42px;
     height: 5em;
     width:5em;
   }
+
+  .img-voyage {
+    height:auto;
+    width:100%;
+  }

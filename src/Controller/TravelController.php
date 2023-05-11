@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Model\TravelManager;
+use App\Model\UserManager;
 
 class TravelController extends AbstractController
 {
@@ -56,6 +57,10 @@ class TravelController extends AbstractController
 
         $travelManager = new TravelManager();
         $travel = $travelManager->selectTravel();
+
+        $userManager = new UserManager();
+        $userManager->updateUserTravel($this->user['id'], $travel['id']);
+
         $apikey = '77a76ff006508eda50354d8b0ed0a5be';
         $url = 'https://api.openweathermap.org/data/2.5/weather?lat=' . $travel['lat'] . '&lon=' . $travel['long'] . '&appid=' . $apikey . '&units=metric&lang=fr';
         $result = file_get_contents($url);
@@ -71,4 +76,24 @@ class TravelController extends AbstractController
             'icon' => $icon,
         ]);
     }
+
+    public function booking(): string
+{
+    // allowed only for users
+    if (!$this->user) {
+        header('Location: /login');
+        exit();
+    }
+
+    // Retrieve user and associated travel information
+    $userManager = new UserManager();
+    $userWithTravel = $userManager->getUserWithTravel($this->user['id']);
+
+    // rest of your code...
+    
+    return $this->twig->render('Travel/voyage.html.twig', [
+        'userWithTravel' => $userWithTravel, // Pass user with travel information to twig
+    ]);
+}
+
 }
