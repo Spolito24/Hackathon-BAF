@@ -8,12 +8,19 @@
 
     <title>{% block title %}{% endblock %}</title>
 
-    <link rel="stylesheet" href="/assets/css/style.css">
-    {% block stylesheet %}{% endblock %}
+		{% block stylesheet %}
+			{% include 'stylesheet.html.twig'%}
+		{% endblock %}
 </head>
 
 <body>
+		{% block header %}
+			{% include 'Bodypart/navbar.html.twig'%}
+		{% endblock %}
     {% block content %}{% endblock %}
+    		{% block footer %}
+			{% include 'Bodypart/footer.html.twig'%}
+		{% endblock %}
     {% block javascript %}{% endblock %}
 </body>
 </html>
