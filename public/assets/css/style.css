@@ -4,24 +4,24 @@
     --blue-color: #1E90FF;
 
     /* Font */
---content-font: 'Rufina', serif;
---title-font: 'Ysabeau', sans-serif;
+    --content-font: 'Rufina', serif;
+    --title-font: 'Ysabeau', sans-serif;
 }
 
 
 
 body {
-    color: #f76c6c;
-   font-family: 'Rufina', serif;
+    color: #000000;
+    font-family: 'Rufina', serif;
 }
 
 
 /* Nav */
 
 nav {
-font-family: var(--title-font);
-font-weight: italic;
-font-size:1.2rem;
+    font-family: var(--title-font);
+    font-weight: italic;
+    font-size: 1.2rem;
 }
 
 .nav-color {
@@ -29,11 +29,11 @@ font-size:1.2rem;
 }
 
 .nav-link {
-    color:var(--white-color);
+    color: var(--white-color);
 }
 
 /* Footer */
 .logo-footer-size {
     width: 24px;
     height: 24px;
-  }
+}
