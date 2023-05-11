@@ -35,7 +35,6 @@ class TravelController extends AbstractController
             if ($data['person'] < 1 || $data['person'] > 8) {
                 $errors[] = 'Entre 1 et 8 personnes peuvent participer.';
             }
-
             if (empty($errors)) {
                 header('Location: /voyage');
                 exit();
