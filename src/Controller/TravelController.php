@@ -7,6 +7,12 @@ class TravelController extends AbstractController
 
     public function travelRequest(): string
     {
+        // allowed only for users
+        if (!$this->user) {
+            header('Location: /login');
+            exit();
+        }
+
         $errors = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Clean $_POST
@@ -33,8 +39,7 @@ class TravelController extends AbstractController
             }
 
             if (empty($errors)) {
-
-                header('Location: /user');
+                header('Location: /voyage');
                 exit();
             }
         }
