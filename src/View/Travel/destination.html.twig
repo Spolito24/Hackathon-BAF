@@ -5,10 +5,19 @@
 	<img src="/assets/images/spinner.gif">
 </div> #}
 
-<h2 class="destination-img" style="background-image: url(/assets/images/greenland-6948495_1280.jpg)">Votre destination
-</h2>
+<h2 class="destination-img" style="background-image: url({{travel.image}})">Votre destination</h2>
+<div class="py-5 text-center">
+	<h2 class="mt-3">Votre Prochaine Destination</h2>
+	{{ travel.city }}
+	{{ travel.country }}
 
-{{ travel.images }}
+
+	<br>
+	{{ temp }}
+	<br>
+	{{weather}}
+
+</div>
 {% endblock %}
 {% block javascript %}
 <script src="/assets/js/spinner.js"></script>

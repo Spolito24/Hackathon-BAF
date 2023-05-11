@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Model\TravelManager;
+
 class TravelController extends AbstractController
 {
 
@@ -52,6 +54,17 @@ class TravelController extends AbstractController
             exit();
         }
 
-        return $this->twig->render('Travel/destination.html.twig');
+        $travelManager = new TravelManager();
+        $travel = $travelManager->selectTravel();
+        $apikey = '77a76ff006508eda50354d8b0ed0a5be';
+        $url = 'https://api.openweathermap.org/data/2.5/weather?lat=' . $travel['lat'] . '&lon=' . $travel['long'] . '&appid=' . $apikey . '&units=metric&lang=fr';
+        $result = file_get_contents($url);
+        $weatherResult = json_decode($result, true);
+
+        return $this->twig->render('Travel/destination.html.twig', [
+            'travel' => $travel,
+            'temp' => $weatherResult['main']['temp'],
+            'weather' => $weatherResult['weather']['0']['description']
+        ]);
     }
 }
