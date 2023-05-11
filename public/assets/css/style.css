@@ -24,8 +24,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    justify-content: center;
     padding: 5em 3em;
     color: var(--blue-color);
 }
