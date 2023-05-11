@@ -22,12 +22,12 @@ CREATE TABLE `destination` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO `destination` (`id`, `country`, `city`, `lat`, `long`) VALUES
-(1, 'Groenland', '\assets\images\greenland-6948495_1280.jpg', 'Narsarmijit', '60.005417', '-44.666359'),
-(2, 'Botswana', '\assets\images\bitobolo-gd78c09cab_1280.jpg', 'Ghanzi', '-21.69785', '21.64581'),
-(3, 'Somalie', '\assets\images\hobyo-6758858.jpg', 'Hobyo', '5.351592', '48.524975'),
-(4, 'Philippine', 'public\assets\images\phillipines-14210287.jpg', 'Palawan', '11.350636', '119.461095'),
-(5, 'Bresil', 'public\assets\images\bresil-9214062.jpg', 'Missão Tunuí', '-68.14892', '1.4077399');
+INSERT INTO `destination` (`id`, `country`, `city`, `image`, `lat`, `long`) VALUES
+(1, 'Groenland', 'Narsarmijit', '\assets\images\greenland-6948495_1280.jpg', '60.005417', '-44.666359'),
+(2, 'Botswana', 'Ghanzi', '\assets\images\bitobolo-gd78c09cab_1280.jpg', '-21.69785', '21.64581'),
+(3, 'Somalie', 'Hobyo', '\assets\images\hobyo-6758858.jpg', '5.351592', '48.524975'),
+(4, 'Philippine', 'Palawan', '\assets\images\phillipines-14210287.jpg', '11.350636', '119.461095'),
+(5, 'Bresil', 'Missão Tunuí', '\assets\images\bresil-9214062.jpg', '-68.14892', '1.4077399');
 
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
