@@ -24,9 +24,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-h1 {
     display: flex;
     justify-content: center;
     padding: 5em 3em;
@@ -35,7 +32,7 @@ h1 {
 
 .box {
     background-color: var(--light-blue-color);
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
 h2 {
