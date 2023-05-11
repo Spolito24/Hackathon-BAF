@@ -24,12 +24,12 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-h1 {
     display: flex;
     justify-content: center;
     padding: 5em 3em;
+}
+
+h1 {
     color: var(--blue-color);
 }
 
@@ -105,3 +105,4 @@ nav {
 .btn-primary {
     background-color: var(--blue-color);
 }
+
