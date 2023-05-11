@@ -1,20 +1,5 @@
 {% extends 'layout.html.twig' %}
 {% block content %}
-<h2 class="destination-img " style="background-image: url({{ userWithTravel.image }})"><p class="destination">{{ userWithTravel.city }}</p></h2>
-	<div class="container p-5">
-		<div class="card row p-4 mx-auto box shadow-lg">
-			<div class="col-xl-10 mx-auto">
-				<div class="text-center px-5 py-2">
-
-					<div class="d-flex flex-column">
-						<div class="mb-4">
-						<div><h2>{{ user.username }}</h2>
-<h2>Préparez en toute tranquilité votre voyage à destination de : {{ userWithTravel.city }}, {{ userWithTravel.country }}</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<h2 class="destination-img2 " style="background-image: url({{ userWithTravel.image }})"><p class="destination">{{ userWithTravel.city }}, {{ userWithTravel.country }}</p></h2>
 {% endblock %}
 
