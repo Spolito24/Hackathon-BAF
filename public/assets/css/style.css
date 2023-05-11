@@ -106,3 +106,32 @@ nav {
 .btn-primary {
     background-color: var(--blue-color);
 }
+
+/* spinner */
+
+#spinner {
+    /* (A1) COVER FULL SCREEN */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 1);
+    transition: opacity 0.2s;
+
+    /* (A2) CENTER SPINNER */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* (A3) HIDE BY DEFAULT */
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* (A4) SHOW SPINNER */
+#spinner.show {
+    visibility: visible;
+    opacity: 1;
+}
