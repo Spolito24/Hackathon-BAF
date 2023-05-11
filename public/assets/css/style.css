@@ -257,3 +257,8 @@ font-size: 42px;
       width: 25vw;
     }
   }
+
+  .spin-size {
+    height: 5em;
+    width:5em;
+  }

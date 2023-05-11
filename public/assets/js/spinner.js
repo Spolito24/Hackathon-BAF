@@ -3,7 +3,7 @@ window.onload = function () {
     show();
     setTimeout(() => {
         hide();
-    }, 2000); // remove the notification after 1 seconds
+    }, 1600); // remove the notification after 1 seconds
 }
 
 function show() {
