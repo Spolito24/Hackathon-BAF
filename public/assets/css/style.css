@@ -2,7 +2,7 @@
     /* Base Color */
     --white-color: #ffffff;
     --blue-color: #1e90ff;
-    --light-blue-color: #72baff;
+    --light-blue-color: #1e90ff;
 
     /* Font */
     --content-font: "Rufina", serif;
@@ -14,6 +14,7 @@ body {
     padding: 0;
     border: 0;
     font-family: "Rufina", serif;
+    background-color: #F1F1F1;
 }
 
 .background-img {
@@ -193,7 +194,7 @@ nav {
 
 .text {
     font-weight: 400;
-    font-size: 38px;
+    font-size: 56px;
     color: #fafafa;
     font-family: "Ysabeau", sans-serif;
 }
@@ -209,5 +210,18 @@ nav {
     background-size: cover;
     display: flex;
     justify-content: center;
-    padding: 7em 3em;
+    align-items: start;
+    padding: 5em 3em;
+}
+
+.name {
+    color:white;
+}
+
+.partir {
+    color: #F1F1F1;
+}
+
+.destination {
+    font-size: 58px;
 }
