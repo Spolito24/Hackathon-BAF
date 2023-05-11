@@ -24,8 +24,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    justify-content: center;
     padding: 5em 3em;
 }
 
@@ -191,6 +189,16 @@ nav {
     100% {
         width: calc(70%);
     }
+}
+
+.text {
+    font-weight: 400;
+    font-size: 38px;
+    color: #fafafa;
+    font-family: "Ysabeau", sans-serif;
+}
+.dud {
+    color: #757575;
 }
 
 .destination-img {
