@@ -24,7 +24,7 @@ class RegisterController extends AbstractController
 
             // Check if form is filled
             if (!isset($data['username']) || empty($data['username'])) {
-                $this->errors[] = 'Please fill in username field.';
+                $this->errors[] = 'Renseignez votre nom.';
             }
 
             if (empty($this->errors)) {
@@ -33,7 +33,7 @@ class RegisterController extends AbstractController
 
                 $registerManager = new RegisterManager();
                 $registerManager->insert($username, $password);
-                $this->successes[] = 'Registration successfull. Please login.';
+                $this->successes[] = 'Inscription réussie. Veuillez vous authentifier.';
             }
             return $this->twig->render('Register/register.html.twig', [
                 'errors' => $this->errors,

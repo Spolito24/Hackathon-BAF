@@ -11,14 +11,12 @@
 
 					<div class="d-flex flex-column">
 						<div class="mb-4">
+						<div><p class="felicitation">Félicitation vous partez au {{ travel.country }}</p></div>
+<p>Retrouvez toutes les informations dans l'onglet Voyages, un de nos agents va prendre très rapidement contact avec vous pour vous accompagnez dans cette nouvelle aventure. </p><br>
 							<p>
-								{{ travel.city }}
+							Pour information en moment la météo est de :
 							</p>
-							{{ travel.country }}
-							<br>
-							{{ temp }}
-							<br>
-							{{ weather }}
+							{{ temp }} degrés et {{ weather }}
 							<img src="{{ icon }}" alt="">
 						</div>
 					</div>

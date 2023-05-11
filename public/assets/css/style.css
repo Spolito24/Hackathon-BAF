@@ -225,3 +225,14 @@ nav {
 .destination {
     font-size: 58px;
 }
+.alert {
+    background-color: #A2CFFC;
+    color: black!important;
+    margin-top: 1em;
+    text-align: center;
+  }
+  
+.felicitation {
+
+font-size: 42px;
+}
