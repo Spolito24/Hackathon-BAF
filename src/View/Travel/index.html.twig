@@ -8,77 +8,62 @@
 			</div>
 		{% endfor %}
 	{% endif %}
-	<div class="py-5 text-center">
-		<h2 class="mt-3">Voyages clé en main</h2>
-	</div>
+						<h1 class="background-img2 text-center"> Prêt à partir {{ user.username }} ?			
+				</h1>
 	{% set date = "now"|date("Y-m-d") %}
-	<div class="container mt-5">
-		<div class="container">
-			Lors de la reservation de votre voyage, vous avez la possibilité d'embarquer avec vous un compagnon mystère. 
-						            Il s'agit d'un voyageur supplémentaire que vous ne connaissez pas.
-		</div>
-		<form
-			method="post">
-			{# customer choice #}
-			<div class="container mt-5">
-				<div class="row">
-					<div class="col-md-4 offset-md-2">
-						<p class="p-2">
-							<label for="date-d" class="form-label ">Date de départ</label>
-							<input type="text" placeholder="Départ" name="date-d" id="date-d" class="form-control" onfocus="(this.type='date', this.value='{{date}}')" required>
-						</p>
-					</div>
-					<div class="col-md-4">
-						<p class="p-2">
-							<label for="date-a" class="form-label ">Date d'arrivée</label>
-							<input type="text" placeholder="Arrivée" name="date-a" id="date-a" class="form-control" onfocus="(this.type='date', this.value='{{date}}')" required>
-						</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 offset-md-2">
-						<label for="person" class="form-label ">Nombre de personnes</label>
-						<input type="number" id="person" name="person" min="1" max="8" required>
-					</div>
-					<div class="col-md-4">
-						<label for="guest" class="form-label ">Compagnon mystère</label>
-						<input type="checkbox" id="guest" name="guest">
-					</div>
-				</div>
-			</div>
-			{# END OF customer choice #}
-			{# customer payment informations #}
-
-			<div class="py-5 text-center">
-				<h2>Paiement</h2>
-			</div>
-			<div class="py-5 text-center">
-
-				<div class="row">
-					<div class="col-md-6">
-						<label for="cc-name" class="form-label">Nom du payeur</label>
-						<input type="text" class="form-control" id="cc-name" placeholder="">
-						<small class="text-body-secondary">Nom complet inscrit sur la carte</small>
-					</div>
-					<div class="col-md-6">
-						<label for="cc-number" class="form-label">N° de la carte de crédit</label>
-						<input type="text" class="form-control" id="cc-number" placeholder="">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3 offset-md-2">
-						<label for="cc-expiration" class="form-label">Date d'expiration</label>
-						<input type="text" class="form-control" id="cc-expiration" placeholder="">
-					</div>
-					<div class="col-md-3 offset-md-2">
-						<label for="cc-cvv" class="form-label">CVV</label>
-						<input type="text" class="form-control" id="cc-cvv" placeholder="">
-					</div>
-				</div>
-
-
-			</div>
-			{# END OF customer payment informations #}
+    <form method="post">
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <!-- customer choice -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="date-d" class="form-label">Date de départ</label>
+                        <input type="date" placeholder="Départ" name="date-d" id="date-d" class="form-control" required>
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="person" class="form-label">Nombre de personnes</label>
+                        <input type="number" id="person" name="person" min="1" max="8" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="date-a" class="form-label">Date d'arrivée</label>
+                        <input type="date" placeholder="Arrivée" name="date-a" id="date-a" class="form-control" required>
+                    </div>
+                    <div class="form-group mt-4 ms-6">
+<label for="guest" class="form-label ">Compagnon mystère</label>
+						<input title="Lors de la reservation de votre voyage, vous avez la possibilité d'embarquer avec vous un compagnon mystère. Il s'agit d'un voyageur supplémentaire que vous ne connaissez pas." type="checkbox" id="guest" name="guest">
+                    </div>
+                </div>
+                <!-- END OF customer choice -->
+            </div>
+            <hr class="mt-5">
+            <div class="text-center">
+                <h2 class="payment">Paiement</h2>
+                <!-- customer payment informations -->
+                <div class="row justify-content-center">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="cc-name" class="form-label">Nom du payeur</label>
+                            <input type="text" class="form-control" id="cc-name" placeholder="Nom complet inscrit sur la carte">
+                        </div>
+                        <div class="form-group">
+                            <label for="cc-expiration" class="form-label">Date d'expiration</label>
+                            <input type="date" class="form-control" id="cc-expiration">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="cc-number" class="form-label">N° de la carte de crédit</label>
+                            <input type="text" class="form-control" id="cc-number">
+                        </div>
+                        <div class="form-group">
+                            <label for="cc-cvv" class="form-label">CVV</label>
+                            <input type="text" class="form-control" id="cc-cvv">
+                        </div>
+                    </div>
+                </div>
+                <!-- END OF customer payment informations -->
 			<hr class="my-4">
 			<button class="w-100 btn btn-primary btn-lg" type="submit" id="submit">Valider mon voyage</button>
 		</form>
