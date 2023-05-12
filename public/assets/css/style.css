@@ -279,3 +279,13 @@ font-size: 42px;
     align-items: start;
     padding: 8em 3em;
 }
+
+.btn-voyage {
+  text-decoration: none;
+  color: var(--blue-color);
+  font-size: 1em;
+}
+
+.title10 {
+    font-size: 1em;
+}
