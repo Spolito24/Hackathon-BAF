@@ -1,82 +1,81 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-{% if errors %}
-{% for error in errors %}
-<div class="alert alert-danger" role="alert">
-    {{ error }}
-</div>
-{% endfor %}
-{% endif %}
-<h1 class="background-img2 text-center partir">
-    <div class="text"></div>
-</h1>
-{% set date = "now"|date("Y-m-d") %}
-<form method="post">
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <h2 class="payment text-center">Information Voyage</h2>
-            <!-- customer choice -->
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="date-d" class="form-label">Date de départ</label>
-                    <input type="date" placeholder="Départ" name="date-d" id="date-d" class="form-control" required>
-                </div>
-                <div class="form-group mt-1">
-                    <label for="person" class="form-label">Nombre de personnes</label>
-                    <input type="number" id="person" name="person" min="1" max="8" class="form-control" required>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="date-a" class="form-label">Date de retour</label>
-                    <input type="date" placeholder="Retour" name="date-a" id="date-a" class="form-control" required>
-                </div>
-                <div class="form-group mt-4 pt-3 ps-1 ms-6">
-                    <label for="guest" class="form-label ">Compagnon mystère</label>
-                    <input
-                        title="Lors de la reservation de votre voyage, vous avez la possibilité d'embarquer avec vous un compagnon mystère. Il s'agit d'un voyageur supplémentaire que vous ne connaissez pas."
-                        type="checkbox" id="guest" name="guest">
-                </div>
-            </div>
-            <!-- END OF customer choice -->
-        </div>
-        <hr class="mt-5">
-        <div class="text-center">
-            <h2 class="payment">Paiement</h2>
-            <!-- customer payment informations -->
-            <div class="row justify-content-center">
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <label for="cc-name" class="form-label">Nom du payeur</label>
-                        <input type="text" class="form-control" id="cc-name"
-                            placeholder="Nom complet inscrit sur la carte">
-                    </div>
-                    <div class="form-group">
-                        <label for="cc-expiration" class="form-label">Date d'expiration</label>
-                        <input type="month" class="form-control" id="cc-expiration">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <label for="cc-number" class="form-label">N° de la carte de crédit</label>
-                        <input type="text" class="form-control" id="cc-number">
-                    </div>
-                    <div class="form-group">
-                        <label for="cc-cvv" class="form-label">CVV</label>
-                        <input type="text" class="form-control" id="cc-cvv">
-                    </div>
-                </div>
-            </div>
-            <!-- END OF customer payment informations -->
-            <hr class="my-4">
-            <button class="w-20 btn btn-primary btn-lg" type="submit" id="submit">Valider mon voyage</button>
-</form>
-</div>
-{% endblock %}
-{% block javascript %}
-<script>
-    window.user = "{{ user.username }}";
-</script>
-<script src="assets/js/jsexplore.js"></script>
-{% endblock %}
+	{% if errors %}
+		{% for error in errors %}
+			<div class="alert alert-danger" role="alert">
+				{{ error }}
+			</div>
+		{% endfor %}
+	{% endif %}
+	<h1 class="background-img2 text-center partir">
+		<div class="text"></div>
+	</h1>
+	{% set date = "now"|date("Y-m-d") %}
+	<form method="post">
+		<div class="container mt-5">
+			<div class="text-center">
+				<div
+					class="row justify-content-center">
+					<!-- customer choice -->
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="date-d" class="form-label">Date de départ</label>
+							<input name="date-d" id="date-d" type="text" class="form-control" placeholder="Date de Départ" onfocus="(this.type='date')" required/>
+						</div>
+						<div class="form-group mt-1">
+							<label for="person" class="form-label">Nombre de personnes</label>
+							<input type="number" id="person" name="person" min="1" max="8" class="form-control" required>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="date-a" class="form-label">Date de retour</label>
+							<input name="date-a" id="date-a" type="text" class="form-control" placeholder="Date de Retour" onfocus="(this.type='date')" required/>
+						</div>
+						<div class="form-group mt-4 pt-3 ps-1 ms-6">
+							<label for="guest" class="form-label ">Compagnon mystère</label>
+							<input title="Lors de la reservation de votre voyage, vous avez la possibilité d'embarquer avec vous un compagnon mystère. Il s'agit d'un voyageur supplémentaire que vous ne connaissez pas." type="checkbox" id="guest" name="guest">
+						</div>
+					</div>
+					<!-- END OF customer choice -->
+				</div>
+			</div>
+			<hr class="mt-5">
+			<div class="text-center">
+				<h2 class="payment">Paiement</h2>
+				<!-- customer payment informations -->
+				<div class="row justify-content-center">
+					<div class="col-md-3">
+						<div class="form-group">
+							<label for="cc-name" class="form-label">Nom du payeur</label>
+							<input type="text" class="form-control" id="cc-name" placeholder="Nom complet inscrit sur la carte">
+						</div>
+						<div class="form-group mt-2">
+							<label for="cc-expiration" class="form-label">Date d'expiration</label>
+							<input type="month" class="form-control" id="cc-expiration">
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<label for="cc-number" class="form-label">N° de la carte de crédit</label>
+							<input type="text" class="form-control" id="cc-number">
+						</div>
+						<div class="form-group mt-2">
+							<label for="cc-cvv" class="form-label">CVV</label>
+							<input type="text" class="form-control" id="cc-cvv">
+						</div>
+					</div>
+				</div>
+				<!-- END OF customer payment informations -->
+				<hr class="my-4">
+				<button class="w-20 btn btn-primary btn-lg" type="submit" id="submit">Valider mon voyage</button>
+			</form>
+		</div>
+	{% endblock %}
+	{% block javascript %}
+		<script>
+			window.user = "{{ user.username }}";
+		</script>
+		<script src="assets/js/jsexplore.js"></script>
+	{% endblock %}

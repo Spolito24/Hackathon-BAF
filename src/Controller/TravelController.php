@@ -61,6 +61,27 @@ class TravelController extends AbstractController
         $userManager = new UserManager();
         $userManager->updateUserTravel($this->user['id'], $travel['id']);
 
+        return $this->twig->render('Travel/destination.html.twig', [
+            'travel' => $travel,
+
+        ]);
+    }
+
+    public function booking(): string
+    {
+        // allowed only for users
+        if (!$this->user) {
+            header('Location: /login');
+            exit();
+        }
+
+        // Retrieve user and associated travel information
+        $userManager = new UserManager();
+        $userWithTravel = $userManager->getUserWithTravel($this->user['id']);
+
+        $travelManager = new TravelManager();
+        $travel = $travelManager->selectPlace($userWithTravel['travel_id']);
+
         $apikey = '77a76ff006508eda50354d8b0ed0a5be';
         $url = 'https://api.openweathermap.org/data/2.5/weather?lat=' . $travel['lat'] . '&lon=' . $travel['long'] . '&appid=' . $apikey . '&units=metric&lang=fr';
         $result = file_get_contents($url);
@@ -69,44 +90,12 @@ class TravelController extends AbstractController
 
         $icon = 'https://openweathermap.org/img/wn/' . $weatherResult['weather']['0']['icon'] . '@2x.png';
 
-        return $this->twig->render('Travel/destination.html.twig', [
-            'travel' => $travel,
+
+        return $this->twig->render('Travel/voyage.html.twig', [
             'temp' => $temp,
             'weather' => $weatherResult['weather']['0']['description'],
             'icon' => $icon,
+            'userWithTravel' => $userWithTravel, // Pass user with travel information to twig
         ]);
     }
-
-    public function booking(): string
-{
-    // allowed only for users
-    if (!$this->user) {
-        header('Location: /login');
-        exit();
-    }
-
-    $travelManager = new TravelManager();
-    $travel = $travelManager->selectTravel();
-
-    // Retrieve user and associated travel information
-    $userManager = new UserManager();
-    $userWithTravel = $userManager->getUserWithTravel($this->user['id']);
-
-    $apikey = '77a76ff006508eda50354d8b0ed0a5be';
-    $url = 'https://api.openweathermap.org/data/2.5/weather?lat=' . $travel['lat'] . '&lon=' . $travel['long'] . '&appid=' . $apikey . '&units=metric&lang=fr';
-    $result = file_get_contents($url);
-    $weatherResult = json_decode($result, true);
-    $temp = (int) $weatherResult['main']['temp'];
-
-    $icon = 'https://openweathermap.org/img/wn/' . $weatherResult['weather']['0']['icon'] . '@2x.png';
-
-    
-    return $this->twig->render('Travel/voyage.html.twig', [
-        'temp' => $temp,
-        'weather' => $weatherResult['weather']['0']['description'],
-        'icon' => $icon,
-        'userWithTravel' => $userWithTravel, // Pass user with travel information to twig
-    ]);
-}
-
 }
