@@ -30,7 +30,7 @@ class UserController extends AbstractController
                     header('Location: /explore');
                     exit();
                 }
-                $this->errors[] = 'Invalid username or password.';
+                $this->errors[] = 'Nom ou mot de passe invalide';
             }
         }
         return $this->twig->render('User/login.html.twig', [

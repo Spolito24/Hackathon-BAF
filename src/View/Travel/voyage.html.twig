@@ -5,7 +5,7 @@
         <h1 class="display-4">Faites vos préparatifs {{ userWithTravel.username }}!</h1>
         <div class="lead">Vous allez découvrir : {{ userWithTravel.city }}, {{ userWithTravel.country }}.</div>
         <hr class="my-4">
-        <div>Quelques détails sur votre voyage :</div>
+        <div class="mb-1">Quelques détails sur votre voyage :</div>
     </div>
 
     <div class="row">
@@ -39,7 +39,7 @@
                 </div>
                 <div class="card-body">
                     <h6 class="card-subtitle mb-2 text-muted">{% set accommodation = random(['Un carton',
-                        'Une tente 2 sec Quechua', 'Une Maison sans toit', 'Le sol']) %} {{accommodation}} !</h6>
+                        'Une tente 2 sec Quechua', 'Une Maison sans toit', 'Un chouette sac de couchage']) %} {{accommodation}}.</h6>
                     <div class="card-text">
                     </div>
                 </div>
@@ -51,8 +51,7 @@
                 <div class="card-body">
                     <h6 class="card-subtitle mb-2 text-muted"> {% set transport = random(['Un avion avec une aile
                         cassé',
-                        'Un chameau', 'Une Barque en bois', 'Un vieux vélo']) %} {{ transport }} !</h6>
-                    <div class="card-text"></div>
+                        'Un chouette popotame', 'Une Barque en bois', 'Un vieux vélo']) %} {{ transport }}.</h6>
                 </div>
             </div>
         </div>
