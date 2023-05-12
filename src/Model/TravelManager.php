@@ -22,4 +22,19 @@ class TravelManager extends AbstractManager
 
         return $this->pdo->query($query)->fetch();
     }
+
+    public function selectPlace(int $id): array
+    {
+        $statement = $this->pdo->prepare('
+        SELECT 
+        user.username, destination.country, destination.city, destination.image, destination.lat, destination.long
+        FROM ' . self::TABLE . '
+        JOIN user ON user.travel_id = destination.id
+        WHERE user.travel_id=:userid');
+
+        $statement->bindValue(':userid', $id, \PDO::PARAM_INT);
+        $statement->execute();
+
+        return $statement->fetch();
+    }
 }

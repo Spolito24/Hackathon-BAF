@@ -212,7 +212,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: start;
-    padding: 5em 3em;
+    padding: 7em 3em;
 }
 
 .name {
@@ -225,4 +225,58 @@ nav {
 
 .destination {
     font-size: 58px;
+}
+.alert {
+    background-color: #A2CFFC;
+    color: black!important;
+    margin-top: 1em;
+    text-align: center;
+  }
+  
+.felicitation {
+
+font-size: 42px;
+}
+
+.line {
+    animation-duration: 4s;
+    animation-name: sliding;
+    animation-iteration-count: reverse;
+    width: 25vw;
+    height: 2px;
+    background-color: var(--blue-color);
+  }
+  
+  @keyframes sliding {
+    from {
+  
+      width: 0%;
+    }
+  
+    to {
+  
+      width: 25vw;
+    }
+  }
+
+  .spin-size {
+    height: 5em;
+    width:5em;
+  }
+
+  .img-voyage {
+    height:auto;
+    width:100%;
+  }
+
+  .destination-img2 {
+    margin: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 8em 3em;
 }
