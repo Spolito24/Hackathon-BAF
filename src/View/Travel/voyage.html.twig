@@ -15,7 +15,8 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ userWithTravel.city }}, {{ userWithTravel.country }}</h5>
                     <div class="card-text">
-                        Cette destination offre une expérience unique grâce à son emplacement à la latitude {{ userWithTravel.lat }} et la longitude {{ userWithTravel.long }}. 
+                        Cette destination offre une expérience unique grâce à son emplacement à la latitude {{
+                        userWithTravel.lat }} et la longitude {{ userWithTravel.long }}.
                         Profitez de votre séjour pour découvrir ses trésors cachés !
                     </div>
                 </div>
@@ -37,8 +38,21 @@
                     <h5 class="card-title">Votre Hébergement</h5>
                 </div>
                 <div class="card-body">
-                    <h6 class="card-subtitle mb-2 text-muted">Une tente 5  <i class="fa fa-star fa-sm "></i> !</h6>
-                    <div class="card-text">Quechua 2 sec</div>
+                    <h6 class="card-subtitle mb-2 text-muted">{% set accommodation = random(['Un carton',
+                        'Une tente 2 sec Quechua', 'Une Maison sans toit', 'Le sol']) %} {{accommodation}} !</h6>
+                    <div class="card-text">
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title">Votre Moyen de transport</h5>
+                </div>
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted"> {% set transport = random(['Un avion avec une aile
+                        cassé',
+                        'Un chameau', 'Une Barque en bois', 'Un vieux vélo']) %} {{ transport }} !</h6>
+                    <div class="card-text"></div>
                 </div>
             </div>
         </div>
