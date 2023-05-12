@@ -38,10 +38,9 @@ class UserController extends AbstractController
         ]);
     }
 
-    public function logout(): void
+    public function logout(): string
     {
         session_destroy();
-        header('Location: /');
-        exit();
+        return $this->twig->render('User/logout.html.twig');
     }
 }
