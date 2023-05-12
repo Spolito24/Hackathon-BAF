@@ -40,6 +40,7 @@ class UserController extends AbstractController
 
     public function logout(): string
     {
+        session_unset();
         session_destroy();
         return $this->twig->render('User/logout.html.twig');
     }
