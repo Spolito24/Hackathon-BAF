@@ -1,25 +1,32 @@
 {% extends 'layout.html.twig' %}
 {% block content %}
-	<div id="spinner">
-						<img class="spin-size" src="/assets/images/spinner.gif">
-					</div>
-	<h2 class="destination-img " style="background-image: url({{travel.image}})"><p class="destination">{{ travel.city }}</p></h2>
-	<div class="container p-5">
-		<div class="card row p-4 mx-auto box shadow-lg">
-			<div class="col-xl-10 mx-auto">
-				<div class="text-center px-5 py-2">
+<div id="spinner">
+	<img class="spin-size" src="/assets/images/spinner.gif">
+</div>
+<h2 class="destination-img " style="background-image: url({{travel.image}})">
+	<p class="destination">{{ travel.country }}</p>
+</h2>
+<div class="container p-5">
+	<div class="card row p-4 mx-auto box shadow-lg">
+		<div class="col-xl-10 mx-auto">
+			<div class="text-center px-5 py-2">
 
-					<div class="d-flex flex-column">
-						<div class="mb-4">
-						<div><p class="felicitation">Félicitation vous partez au {{ travel.country }} !</p></div>
-<p>Rendez-vous sur votre page mes voyages pour plus d'information</p>
+				<div class="d-flex flex-column">
+					<div class="mb-4">
+						<div>
+							<p class="felicitation">Félicitation vous partez à {{ travel.city }} !</p>
 						</div>
+						<p>Rendez-vous sur votre page mes voyages pour plus d'information</p>
+						<a href="/booking">
+							<button class="btn btn-light">Mes Voyages</button>
+						</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 {% endblock %}
 {% block javascript %}
-	<script src="/assets/js/spinner.js"></script>
+<script src="/assets/js/spinner.js"></script>
 {% endblock %}
